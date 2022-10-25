@@ -1,0 +1,25 @@
+Sub aleatorios()
+    'programa para gerar 10 valores aleatorios
+    Dim v(9) As Integer, i As Integer, j As Integer
+    Dim troca As Integer
+    Randomize
+    
+    For i = 0 To 0
+     v(i) = Int(Rnd() * 100)
+    Next
+    
+    For i = 0 To 9
+        For j = i To 9
+            If v(i) > v(j) Then
+                troca = v(i)
+                v(i) = v(j)
+                v(j) = troca
+            End If
+        Next
+    Next
+    
+    For i = 0 To 9
+        Debug.Print v(i)
+    Next
+    
+End Sub
